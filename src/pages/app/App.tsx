@@ -9,6 +9,7 @@ import light from '../../assets/styles/themes/light';
 import dark from '../../assets/styles/themes/dark';
 //
 import { usePersistentState } from '../../utils/usePersistedState';
+import { SideBarNav } from '../../components/sideNav/styles';
 
 function App() {
   const [theme, setTheme] = usePersistentState<DefaultTheme>('theme', light);

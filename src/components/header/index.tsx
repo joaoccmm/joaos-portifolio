@@ -1,14 +1,22 @@
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
+//components 
+import { SideNav } from '../sideNav';
 //styled
-import { ActionIcon, HeaderLi, HeaderNav, HeaderUl, Logo } from './styles';
-import { ThemeContext } from 'styled-components';
+import { ActionIcon, HeaderLi, HeaderNav, HeaderUl, Logo, SideBarImg } from './styles';
 //assets
-import VerifyIcon from '../../assets/img/verify.svg';
 import SunIcon from '../../assets/img/sun-icon.svg';
+import VerifyIcon from '../../assets/img/verify.svg';
+import SideBarIcon from '../../assets/img/nav-icon.svg';
 import TranslateIcon from '../../assets/img/translate-icon.svg';
+//interface
 import { IHeader } from './interface';
 
 export const Header: React.FC<IHeader> = ({ handleTheme }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenSideBar = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header>
@@ -27,7 +35,9 @@ export const Header: React.FC<IHeader> = ({ handleTheme }) => {
           <img src={SunIcon} onClick={handleTheme} alt="verify icon" className='themeIcon' />
           <img src={TranslateIcon} alt="verify icon" className='translateIcon' />
         </ActionIcon>
+        <SideBarImg src={SideBarIcon} className='sideBarIcon' onClick={handleOpenSideBar} />
       </HeaderNav>
+      <SideNav isOpen={isOpen} handleOpenSideBar={handleOpenSideBar} />
     </header>
   );
 };
