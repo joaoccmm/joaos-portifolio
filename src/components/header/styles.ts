@@ -7,17 +7,6 @@ export const HeaderNav = styled.nav`
   position: absolute;
   display: flex;
   align-items: center;
-
-  /* .sideBarIcon{
-    display: none;
-
-
-    @media only screen and (max-width: 1049px) {
-      display: flex;
-      cursor: pointer;
-      margin-right: auto;
-    }
-  } */
 `;
 
 

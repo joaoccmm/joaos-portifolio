@@ -1,48 +1,60 @@
 import styled from "styled-components";
 
 export const SideBarNav = styled.nav`
-  width: 100vw;
-  height: 100vh;
-  padding: 52px 20px;
-  position: fixed;
-  top: 0;
-  right: 0px;
-  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
-  backdrop-filter: blur(8px); /* Aplicando o filtro de desfoque */
-  z-index: 999; /* Certifique-se de que a sobreposição esteja acima do conteúdo */
-  transition: left 1s ease;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0px;
 
-  display: flex;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(8px); 
+    z-index: 999; 
+    transition: left 1s ease;
 
-  .sidebar.open {
-    left: 0;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
+    .sidebar.open {
+      left: 0;
+    }
 
-  a:hover {
-    color: #ffcc00;
-  }
+    a {
+      text-decoration: none;
+      color: ${props => props.theme.colors.font};
+    }
 
-  @media only screen and (min-width: 1049px) {
-    display: none;
-  }
+    a:hover {
+      color: #ffcc00;
+    }
 
-  img{
-    height: 20px;
-    width: 20px;
-  }
-`;
+    @media only screen and (min-width: 1049px) {
+      display: none;
+    }
+  `;
+
+export const CloseIconNav = styled.img`
+      height: 20px;
+      width: 20px;
+
+      cursor: pointer;
+  `;
 
 export const SideBarUl = styled.ul`
-    list-style-type: none;
-    padding: 0;
-`;
+
+    margin-top: 40px;
+      list-style-type: none;
+      padding: 0;
+
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  `;
 
 export const SideBarLi = styled.li`
-    list-style-type: none;
-    padding-bottom: 30px;
-`;
+      list-style-type: none;
+      padding-bottom: 30px;
+  `;

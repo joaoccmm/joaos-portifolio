@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 //
 import '../../assets/styles/main.scss';
 import { Header } from '../../components/header';
@@ -9,9 +9,9 @@ import light from '../../assets/styles/themes/light';
 import dark from '../../assets/styles/themes/dark';
 //
 import { usePersistentState } from '../../utils/usePersistedState';
-import { SideBarNav } from '../../components/sideNav/styles';
 
 function App() {
+
   const [theme, setTheme] = usePersistentState<DefaultTheme>('theme', light);
 
   const handleTheme = () => {

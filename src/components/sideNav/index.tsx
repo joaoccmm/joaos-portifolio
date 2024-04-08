@@ -1,24 +1,27 @@
 import React from 'react';
 //styles
-import { SideBarLi, SideBarNav, SideBarUl } from './styles';
+import { CloseIconNav, SideBarLi, SideBarNav, SideBarUl } from './styles';
 //components
 import { Visibility } from '../visibility';
 //assests
 import CloseIcon from '../../assets/img/close-icon.svg';
+//translation
+import { useTranslation } from 'react-i18next';
 
 export const SideNav: React.FC<any> = ({ isOpen, handleOpenSideBar }) => {
+
+  const { t } = useTranslation();
 
   return (
     <Visibility visible={isOpen}>
       <SideBarNav>
-        <img src={CloseIcon} onClick={handleOpenSideBar} />
+        <CloseIconNav src={CloseIcon} onClick={handleOpenSideBar} />
         <SideBarUl>
-          <SideBarLi><a href="/" className='link ativo'>Home</a></SideBarLi>
-          <SideBarLi><a href="/sobre" className='link'>Projects</a></SideBarLi>
-          <SideBarLi><a href="/contato" className='link'>Coworkers</a></SideBarLi>
-          <SideBarLi><a href="/contato" className='link'>About</a></SideBarLi>
+          <SideBarLi><a href="/" className='link ativo'>{t('header.option1')}</a></SideBarLi>
+          <SideBarLi><a href="/sobre" className='link'>{t('header.option2')}</a></SideBarLi>
+          <SideBarLi><a href="/contato" className='link'>{t('header.option3')}</a></SideBarLi>
+          <SideBarLi><a href="/contato" className='link'>{t('header.option4')}</a></SideBarLi>
         </SideBarUl>
-
       </SideBarNav>
     </Visibility>
   );
