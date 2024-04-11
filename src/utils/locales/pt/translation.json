@@ -4,5 +4,9 @@
     "option2": "Projetos",
     "option3": "Depoimentos",
     "option4": "Sobre"
+  },
+  "home": {
+    "introduction": "Olá, eu sou o Joao :)",
+    "dev": "Desenvolvedor Front-End"
   }
 }

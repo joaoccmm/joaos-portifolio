@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 //components 
 import { SideNav } from '../sideNav';
 //styled
@@ -12,7 +13,6 @@ import TranslateIcon from '../../assets/img/translate-icon.svg';
 import { IHeader } from './interface';
 //translation
 import { useTranslation } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 
 
 export const Header: React.FC<IHeader> = ({ handleTheme }) => {
@@ -40,10 +40,10 @@ export const Header: React.FC<IHeader> = ({ handleTheme }) => {
           <img src={VerifyIcon} alt="verify icon" className='verifyIcon' />
         </Logo>
         <HeaderUl>
-          <HeaderLi><a href="/" className='link ativo'>{t('header.option1')}</a></HeaderLi>
-          <HeaderLi><a href="/sobre" className='link'>{t('header.option2')}</a></HeaderLi>
-          <HeaderLi><a href="/contato" className='link'>{t('header.option3')}</a></HeaderLi>
-          <HeaderLi><a href="/contato" className='link'>{t('header.option4')}</a></HeaderLi>
+          <HeaderLi><Link to="/" className='link ativo'>{t('header.option1')}</Link></HeaderLi>
+          <HeaderLi><Link to="/projects" className='link'>{t('header.option2')}</Link></HeaderLi>
+          <HeaderLi><Link to="/coworkers" className='link'>{t('header.option3')}</Link></HeaderLi>
+          <HeaderLi><Link to="/about" className='link'>{t('header.option4')}</Link></HeaderLi>
         </HeaderUl>
         <ActionIcon>
           <img src={SunIcon} onClick={handleTheme} alt="verify icon" className='themeIcon' />

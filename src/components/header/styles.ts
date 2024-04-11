@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const HeaderNav = styled.nav`
+box-sizing: border-box;
   height: 6vh;
-  width: calc(100% - 200px);
+  width: calc(100% - 400px);
 
-  position: absolute;
   display: flex;
   align-items: center;
+
+  overflow: hidden;
+  position: fixed;
 `;
 
 
@@ -17,21 +20,25 @@ export const Logo = styled.div`
     flex-direction: row;
     align-items: center;
     margin-right: auto;
+
+    
     .myPhoto{
       height: 40px;
       width: 40px;
       border-radius: 50%;
     }
-
+    
     .verifyIcon{
       height: 22px;
       width: 22px;
       margin-left: 10px;
       margin-bottom: 2px;
     }
-
+    
     h1{
-      font-size: 1.4rem;
+      font-family: "BLOUSE" !important;
+      font-weight: 400 !important;
+      font-size: 1.6rem;
     } 
 
     @media only screen and (max-width: 1049px) {
@@ -71,7 +78,7 @@ export const HeaderLi = styled.li`
   list-style: none;
 
   .link{
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
 
   .ativo{

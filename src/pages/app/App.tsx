@@ -9,6 +9,11 @@ import light from '../../assets/styles/themes/light';
 import dark from '../../assets/styles/themes/dark';
 //
 import { usePersistentState } from '../../utils/usePersistedState';
+import { Route, Routes } from 'react-router-dom';
+import { Home } from '../home';
+import { Projects } from '../projects';
+import { Coworkers } from '../coworkers';
+import { About } from '../about';
 
 function App() {
 
@@ -22,7 +27,15 @@ function App() {
     <ThemeProvider theme={theme}>
       <AppContent>
         <GlobalStyle />
-        <Header handleTheme={() => handleTheme()} />
+        <div className='headerContent'>
+          <Header handleTheme={() => handleTheme()} />
+        </div>
+        <Routes >
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/coworkers" element={<Coworkers />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </AppContent>
     </ThemeProvider>
   );

@@ -5,8 +5,9 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
 
-    font-family: "BLOUSE";
-    font-weight: normal;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-style: normal;
     font-size: 16px;
   }
 
@@ -19,5 +20,23 @@ export default createGlobalStyle`
 
   a{
     color: ${props => props.theme.colors.font};
+  }
+
+  .flex-row{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex-center{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .justify-center{
+    justify-content: center;
+  }
+
+  .align-center{
+    align-items: center;
   }
 `;

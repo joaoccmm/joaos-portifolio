@@ -4,5 +4,9 @@
     "option2": "Projects",
     "option3": "Coworkers",
     "option4": "About"
+  },
+  "home": {
+    "introduction": "Hello there, my name is Joao :)",
+    "dev": "I’m a front-end developer"
   }
 }

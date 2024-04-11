@@ -5,6 +5,13 @@ export const AppContent = styled.div`
   width: 100vw;
 
   overflow: hidden; 
-  padding: 40px 100px; 
+  padding: 50px 200px; 
   box-sizing: border-box; 
+
+  display: flex;
+  flex-direction: column;
+
+  .headerContent{
+    margin-bottom: 6vh;
+  }
 `;
