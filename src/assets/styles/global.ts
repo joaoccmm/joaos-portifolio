@@ -5,10 +5,8 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
 
-    font-family: "Poppins";
-    font-weight: 600;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
-    font-size: 16px;
   }
 
   body{
@@ -19,6 +17,8 @@ export default createGlobalStyle`
   }
 
   a{
+    font-style: none;
+    text-decoration: none;
     color: ${props => props.theme.colors.font};
   }
 
@@ -38,5 +38,58 @@ export default createGlobalStyle`
 
   .align-center{
     align-items: center;
+  }
+
+  .textPrimary{
+    color: ${props => props.theme.colors.primary};;
+  }
+
+  @media screen and (max-width: 1400px) {
+    html{
+      font-size: 16px !important;
+    }
+    .link{
+      width: 500px;
+      /* font-size: 1.1rem; */
+    }
+
+    .headerUl{
+      width: 490px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    html{
+      font-size: 11px !important;
+    }
+/*     
+    .logo{
+      h1{
+        font-size: 1.4rem;
+      }
+    } */
+
+    .headerUl{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    html{
+      font-size: 10px !important;
+    }
+    .logo{
+      h1{
+        font-size: 2.2rem;
+      }
+
+    }
+    .actionIcon, .sideBarIcon, .logo{
+      img{
+        height: 2.3rem;
+        width: 2.3rem;
+      }
+    }
+
   }
 `;

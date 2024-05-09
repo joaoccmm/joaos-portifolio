@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const HeaderNav = styled.nav`
-box-sizing: border-box;
+  box-sizing: border-box;
   height: 6vh;
-  width: calc(100% - 400px);
+  width: 74%;
 
   display: flex;
   align-items: center;
@@ -14,37 +14,22 @@ box-sizing: border-box;
 
 
 export const Logo = styled.div`
-    width: 25%;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-right: auto;
 
-    
-    .myPhoto{
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-    }
-    
     .verifyIcon{
-      height: 22px;
-      width: 22px;
+      height: 1.5rem;
       margin-left: 10px;
-      margin-bottom: 2px;
+      margin-top: 2px;
     }
     
     h1{
-      font-family: "BLOUSE" !important;
       font-weight: 400 !important;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     } 
-
-    @media only screen and (max-width: 1049px) {
-      width: auto;
-      margin-right: auto;
-    }
 `;
 
 export const HeaderUl = styled.ul`
@@ -52,24 +37,7 @@ export const HeaderUl = styled.ul`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
-  @media only screen and (min-width: 1600px) {
-    width: 680px;
-  }
-
-  @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-    width: 580px;
-  }
-
-  
-  @media only screen and (min-width: 1050px) and (max-width: 1199px) {
-    width: 460px;
-  }
-
-  @media only screen and (max-width: 1049px) {
-    display: none;
-  }
-
+  width: 680px;
 `;
 
 
@@ -78,15 +46,32 @@ export const HeaderLi = styled.li`
   list-style: none;
 
   .link{
-    font-size: 1.3em;
+    font-size: 1.3rem;
+    transition: 0.3s all;
   }
 
-  .ativo{
-    padding-bottom: 10px;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 4px solid #FF1447;
-    animation: moveLeftRight 2s alternate;
+  .link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: ${props => props.theme.colors.primary};
+    transition: width 0.2s;
+  }
+
+  .link:hover::after {
+      width: 100%;
+  }
+
+  .active::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: ${props => props.theme.colors.primary};
+    transition: width 0.3s; 
+    width: 100%;
+
   }
 `;
 
@@ -94,26 +79,25 @@ export const ActionIcon = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: 46px;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 
   .translateIcon{
     margin-left: 24px;
   }
 
   img{
-    height: 25px;
+    height: 1.6rem;
     cursor: pointer;
-  }
-
-  @media only screen and (max-width: 1049px) {
-    display: none;
   }
 `;
 
 export const SideBarImg = styled.img`
   cursor: pointer;
+  height: 1.2rem;
+  margin-left: 24px;
+  margin-bottom: 4px;
 
-  @media only screen and (min-width: 1049px) {
+  @media only screen and (min-width: 1200px) {
     display: none;
   }
 `;

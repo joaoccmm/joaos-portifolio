@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 //
-import '../../assets/styles/main.scss';
 import { Header } from '../../components/header';
 import { AppContent } from './styles';
 import GlobalStyle from './../../assets/styles/global';
@@ -28,10 +27,12 @@ function App() {
       <AppContent>
         <GlobalStyle />
         <div className='headerContent'>
-          <Header handleTheme={() => handleTheme()} />
+          <Header
+            handleTheme={() => handleTheme()}
+            theme={theme} />
         </div>
-        <Routes >
-          <Route path="/" element={<Home />} />
+        <Routes>
+          <Route path="/home" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/coworkers" element={<Coworkers />} />
           <Route path="/about" element={<About />} />

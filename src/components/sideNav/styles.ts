@@ -23,14 +23,16 @@ export const SideBarNav = styled.nav`
 
     a {
       text-decoration: none;
+      font-size: 2rem;
       color: ${props => props.theme.colors.font};
     }
 
     a:hover {
-      color: #ffcc00;
+      color: ${props => props.theme.colors.primary};
+
     }
 
-    @media only screen and (min-width: 1049px) {
+    @media only screen and (min-width: 1200px) {
       display: none;
     }
   `;

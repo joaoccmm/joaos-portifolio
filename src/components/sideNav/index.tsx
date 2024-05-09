@@ -4,7 +4,7 @@ import { CloseIconNav, SideBarLi, SideBarNav, SideBarUl } from './styles';
 //components
 import { Visibility } from '../visibility';
 //assests
-import CloseIcon from '../../assets/img/close-icon.svg';
+import CloseIcon from '../../assets/img/close-dark-mode.svg';
 //translation
 import { useTranslation } from 'react-i18next';
 

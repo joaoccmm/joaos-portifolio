@@ -6,7 +6,17 @@
     "option4": "Sobre"
   },
   "home": {
-    "introduction": "Olá, eu sou o Joao :)",
-    "dev": "Desenvolvedor Front-End"
+    "hello": "Olá.",
+    "introduction": "Eu sou o",
+    "dev": "Desenvolvedor Front-End",
+    "experience": "Desenvolvedor Front-End e aspirante a UI Designer, +4 anos de experiencia;",
+    "enthousiaste": "Entusiasta em soluções criativas e acessibilidade digital.",
+    "contact": "Entre em contato",
+    "git": "Perfil GitHub",
+    "mail": "Endereço de Email",
+    "linked": "Perfil LinkedIn"
+  },
+  "projects": {
+    "title": "Projetos"
   }
 }
